@@ -3,8 +3,9 @@
     x-data="{
     open: @entangle('open')
     }"
-x-show="open">
+x-show="open"
 x-cloak
+>
     <div class="fixed inset-0"></div>
 
     <div class="fixed inset-0 overflow-hidden">
@@ -39,7 +40,7 @@ x-cloak
                                                 <div class="flex text-sm text-gray-600">
                                                     <label for="file" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                         <span>Upload a file</span>
-                                                        <input id="file" name="file" type="file" class="sr-only">
+                                                        <input id="file" wire:model="file" name="file" type="file" class="sr-only">
                                                     </label>
                                                     <p class="pl-1">or drag and drop</p>
                                                 </div>
